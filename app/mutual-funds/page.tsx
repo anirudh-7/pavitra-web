@@ -104,7 +104,7 @@ export default function MutualFundsPage() {
     setLoadingSearch(true)
     setSearchError('')
     try {
-      const res = await fetch(`/api/mf/search?q=${encodeURIComponent(q.trim())}`)
+      const res = await fetch(`https://api.mfapi.in/mf/search?q=${encodeURIComponent(q.trim())}`)
       const data: SearchResult[] = await res.json()
       setSearchResults(Array.isArray(data) ? data.slice(0, 15) : [])
       setShowDropdown(true)
@@ -128,7 +128,7 @@ export default function MutualFundsPage() {
     if (funds.find((f) => f.schemeCode === sr.schemeCode)) return
     setLoadingFund(true)
     try {
-      const res = await fetch(`/api/mf/${sr.schemeCode}`)
+      const res = await fetch(`https://api.mfapi.in/mf/${sr.schemeCode}`)
       const fd: FundData = await res.json()
       if (!fd.data || fd.data.length === 0) return
 

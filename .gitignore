@@ -85,3 +85,6 @@ ecosystem.config.js.bak
 
 # Accidental nested app dir
 app/app/
+
+# API routes (not needed for static export, calls MFAPI directly)
+app/api/

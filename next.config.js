@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  output: 'export',
+  basePath: '/pavitra-web',
   images: {
-    domains: ['pgsl.in'],
+    unoptimized: true,
   },
 }
 

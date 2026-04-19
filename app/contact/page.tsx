@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 const services = [
   'Mutual Fund Advisory',
@@ -136,9 +137,9 @@ export default function ContactPage() {
               <p className="text-charcoal-500 text-sm mb-4">
                 Already a client? Log in to your InvestWell portal to view your portfolio and statements.
               </p>
-              <a href="/investwell" className="btn-outline-brand block text-center text-sm py-2.5">
+              <Link href="/investwell" className="btn-outline-brand block text-center text-sm py-2.5">
                 Go to Investor Portal →
-              </a>
+              </Link>
             </div>
           </div>
 
